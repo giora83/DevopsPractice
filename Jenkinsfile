@@ -10,6 +10,6 @@ node {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean package"
    }
    stage('Deploy to tomcat') {
-    mvn tomcat7:deploy
+    sh "cp web/target/*.war /usr/share/tomcat/webapps"
   }
 }
