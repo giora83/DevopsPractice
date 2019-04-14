@@ -11,6 +11,5 @@ node {
    }
    stage('Results') {
     sh 'scp tlt/target/tlt.war some-remote-host:/LOCATION/TOMCAT/webapps/'
-}
-   }
+  }
 }
